@@ -15,6 +15,23 @@ load_dotenv()
 
 mcp = FastMCP("HotelBookings")
 
+middleware = [
+    Middleware(
+        CORSMiddleware,
+        allow_origins=["*"],  # Allow all origins; use specific origins for security
+        allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+        allow_headers=[
+            "mcp-protocol-version",
+            "mcp-session-id",
+            "Authorization",
+            "Content-Type",
+        ],
+        expose_headers=["mcp-session-id"],
+    )
+]
+
+app = mcp.http_app(middleware=middleware)
+
 
 async def obtener_conexion_db():
     return await asyncpg.connect(os.getenv("DATABASE_URL"))
@@ -114,26 +131,4 @@ async def get_weather(city: str) -> str:
 
         return f"The current temperature in {city} is {temp}°C."
 
-app = mcp.http_app()
 
-@app.middleware("http")
-async def catch_options_requests(request, call_next):
-    if request.method == "OPTIONS":
-        return Response(
-            status_code=200,
-            headers={
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET, POST, OPTIONS, DELETE",
-                "Access-Control-Allow-Headers": "Authorization, Content-Type, mcp-protocol-version, mcp-session-id, x-mcp-protocol-version",
-                "Access-Control-Max-Age": "86400",
-            },
-        )
-    return await call_next(request)
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-    expose_headers=["mcp-session-id"],
-)
