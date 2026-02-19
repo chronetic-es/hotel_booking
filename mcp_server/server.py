@@ -37,7 +37,7 @@ async def obtener_opciones_habitacion() -> str:
     conn = await obtener_conexion_db()
     try:
         filas = await conn.fetch("SELECT name, base_price, description FROM RoomTypes")
-        opciones = [f"{f['name']} ({f['base_price']}€/noche): {f['description']}" for f in filas]
+        opciones = [f"{f['name']} ({f['base_price']}€ por noche): {f['description']}" for f in filas]
         return "Opciones disponibles:\n" + "\n".join(opciones)
     finally:
         await conn.close()
