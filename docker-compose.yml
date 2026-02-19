@@ -1,7 +1,6 @@
 services:
   db:
     build: ./database
-    container_name: hotel_db
     restart: always
     environment:
       - POSTGRES_USER=${DB_USER}
@@ -14,7 +13,6 @@ services:
 
   mcp_server:
     build: ./mcp_server
-    container_name: mcp_server
     depends_on:
       - db
     environment:
