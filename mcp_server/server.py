@@ -70,6 +70,9 @@ async def verificar_disponibilidad(fecha_entrada: str, fecha_salida: str, tipo_h
         tipo = await conn.fetchrow("SELECT id FROM RoomTypes WHERE name ILIKE $1", f"%{tipo_habitacion}%")
         if not tipo: return f"Tipo '{tipo_habitacion}' no válido."
 
+        d_entrada = date.fromisoformat(fecha_entrada)
+        d_salida = date.fromisoformat(fecha_salida)
+
         query = """
             SELECT COUNT(*) FROM Rooms r
             WHERE r.room_type_id = $1
@@ -80,11 +83,13 @@ async def verificar_disponibilidad(fecha_entrada: str, fecha_salida: str, tipo_h
                 AND b.status != 'Cancelled'
             )
         """
-        cantidad = await conn.fetchval(query, tipo['id'], fecha_entrada, fecha_salida)
-        return f"Hay {cantidad} habitaciones '{tipo_habitacion}' disponibles." if cantidad > 0 else "Agotado."
+        cantidad = await conn.fetchval(query, tipo['id'], d_entrada, d_salida)
+
+        if cantidad > 0:
+            return f"Sí, hay {cantidad} habitaciones '{tipo_habitacion}' disponibles."
+        return f"Lo siento, no hay disponibilidad para {tipo_habitacion} en esas fechas."
     finally:
         await conn.close()
-
 @mcp.tool()
 async def crear_reserva(nombre_completo: str, email: str, fecha_entrada: str, fecha_salida: str, tipo_habitacion: str) -> str:
     """Crea la reserva y asigna una habitación física automáticamente."""
