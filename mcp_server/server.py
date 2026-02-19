@@ -116,11 +116,24 @@ async def get_weather(city: str) -> str:
 
 app = mcp.http_app()
 
+@app.middleware("http")
+async def catch_options_requests(request, call_next):
+    if request.method == "OPTIONS":
+        return Response(
+            status_code=200,
+            headers={
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, OPTIONS, DELETE",
+                "Access-Control-Allow-Headers": "Authorization, Content-Type, mcp-protocol-version, mcp-session-id, x-mcp-protocol-version",
+                "Access-Control-Max-Age": "86400",
+            },
+        )
+    return await call_next(request)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
     expose_headers=["mcp-session-id"],
-    allow_credentials=False,
 )
