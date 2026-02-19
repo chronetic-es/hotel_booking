@@ -37,6 +37,14 @@ CREATE TABLE Bookings (
 );
 
 
+CREATE TABLE RoomAssignments (
+    id SERIAL PRIMARY KEY,
+    booking_id INT REFERENCES Bookings(id) ON DELETE CASCADE,
+    room_id INT REFERENCES Rooms(id),
+    assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 INSERT INTO RoomTypes (name, base_price, max_occupancy, description) VALUES
 ('Standard Double', 120.00, 2, 'Two twin beds, perfect for friends.'),
 ('Executive King', 250.00, 2, 'One king bed with a city view.'),
@@ -54,3 +62,5 @@ INSERT INTO Users (full_name, email, phone) VALUES
 
 INSERT INTO Bookings (user_id, check_in_date, check_out_date, total_amount, status) VALUES
 (1, '2026-06-10', '2026-06-13', 360.00, 'Confirmed');
+
+INSERT INTO RoomAssignments (booking_id, room_id) VALUES (1, 1);
