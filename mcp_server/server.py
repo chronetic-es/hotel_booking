@@ -6,7 +6,6 @@ from datetime import date
 from fastmcp import FastMCP
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
-from mcp.server.auth.settings import AuthSettings
 
 from pydantic import AnyHttpUrl
 
@@ -14,13 +13,12 @@ from pydantic import AnyHttpUrl
 load_dotenv()
 
 
-mcp = FastMCP("ToyWeather")
+mcp = FastMCP("HotelBookings")
 
-# Configure CORS for browser-based clients
 middleware = [
     Middleware(
         CORSMiddleware,
-        allow_origins=["*"],  # Allow all origins; use specific origins for security
+        allow_origins=["*"],
         allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
         allow_headers=[
             "mcp-protocol-version",
