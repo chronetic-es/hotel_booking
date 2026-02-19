@@ -32,6 +32,13 @@ middleware = [
 
 app = mcp.http_app(middleware=middleware)
 
+@app.middleware("http")
+async def debug_headers(request, call_next):
+    print(f"DEBUG: Petición {request.method} a {request.url}")
+    print(f"DEBUG: Headers: {dict(request.headers)}")
+    response = await call_next(request)
+    return response
+
 
 async def obtener_conexion_db():
     return await asyncpg.connect(os.getenv("DATABASE_URL"))
