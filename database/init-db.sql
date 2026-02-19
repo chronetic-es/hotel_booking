@@ -30,8 +30,7 @@ CREATE TABLE Rooms (
 CREATE TABLE Users (
     id SERIAL PRIMARY KEY,
     full_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    phone VARCHAR(20),
+    phone VARCHAR(20) UNIQUE NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -65,7 +64,7 @@ INSERT INTO Rooms (room_number, room_type_id, status) VALUES
 ('201', 2, 'Available'),
 ('301', 3, 'Dirty');
 
-INSERT INTO Users (full_name, email, phone) VALUES
+INSERT INTO Users (full_name, phone) VALUES
 ('John Doe', 'john@example.com', '555-0199'),
 ('Jane Smith', 'jane@example.com', '555-0122');
 
