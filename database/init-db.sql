@@ -1,3 +1,12 @@
+DROP TABLE IF EXISTS RoomAssignments CASCADE;
+DROP TABLE IF EXISTS Bookings CASCADE;
+DROP TABLE IF EXISTS Rooms CASCADE;
+DROP TABLE IF EXISTS Users CASCADE;
+DROP TABLE IF EXISTS RoomTypes CASCADE;
+
+DROP TYPE IF EXISTS room_status;
+DROP TYPE IF EXISTS booking_status;
+
 
 CREATE TYPE room_status AS ENUM ('Available', 'Dirty', 'Maintenance');
 CREATE TYPE booking_status AS ENUM ('Pending', 'Confirmed', 'CheckedIn', 'Completed', 'Cancelled');
