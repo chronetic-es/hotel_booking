@@ -37,7 +37,7 @@ async def obtener_opciones_habitacion() -> str:
     conn = await obtener_conexion_db()
     try:
         filas = await conn.fetch("SELECT name, base_price, description FROM RoomTypes")
-        opciones = [f"{f['name']} ({f['base_price']}€ por noche): {f['description']}" for f in filas]
+        opciones = [f"{f['name']} ({f['base_price']} euros por noche): {f['description']}" for f in filas]
         return "Opciones disponibles:\n" + "\n".join(opciones)
     finally:
         await conn.close()
@@ -53,7 +53,7 @@ async def calcular_presupuesto(fecha_entrada: str, fecha_salida: str, tipo_habit
 
         noches = calcular_noches(fecha_entrada, fecha_salida)
         total = noches * tipo['base_price']
-        return f"Para {noches} noches, el total sería de {total:.2f}€ ({tipo['base_price']}€ por noche)."
+        return f"Para {noches} noches, el total sería de {total:.2f} euros ({tipo['base_price']} euros por noche)."
     finally:
         await conn.close()
 
@@ -121,7 +121,7 @@ async def crear_reserva(nombre_completo: str, telefono: str, fecha_entrada: str,
 
             await conn.execute("INSERT INTO RoomAssignments (booking_id, room_id) VALUES ($1, $2)", b_id, habitacion_id)
 
-            return f"¡Reserva con el número {b_id} confirmada para {nombre_completo}! Total: {total:.2f}€."
+            return f"¡Reserva con el número {b_id} confirmada para {nombre_completo}! Total: {total:.2f} euros."
     except Exception as e:
         return f"Error al procesar la reserva: {str(e)}"
     finally:
