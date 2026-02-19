@@ -90,11 +90,16 @@ async def verificar_disponibilidad(fecha_entrada: str, fecha_salida: str, tipo_h
         return f"Lo siento, no hay disponibilidad para {tipo_habitacion} en esas fechas."
     finally:
         await conn.close()
+
 @mcp.tool()
 async def crear_reserva(nombre_completo: str, email: str, fecha_entrada: str, fecha_salida: str, tipo_habitacion: str) -> str:
     """Crea la reserva y asigna una habitación física automáticamente."""
     conn = await obtener_conexion_db()
     try:
+
+        d_entrada = date.fromisoformat(fecha_entrada)
+        d_salida = date.fromisoformat(fecha_salida)
+
         async with conn.transaction():
             tipo = await conn.fetchrow("SELECT id, base_price FROM RoomTypes WHERE name ILIKE $1", f"%{tipo_habitacion}%")
             if not tipo: return "Tipo de habitación no encontrado."
@@ -102,13 +107,15 @@ async def crear_reserva(nombre_completo: str, email: str, fecha_entrada: str, fe
             habitacion_id = await conn.fetchval("""
                 SELECT id FROM Rooms WHERE room_type_id = $1 AND id NOT IN (
                     SELECT ra.room_id FROM RoomAssignments ra JOIN Bookings b ON ra.booking_id = b.id
-                    WHERE (b.check_in_date, b.check_out_date) OVERLAPS ($2::date, $3::date) AND b.status != 'Cancelled'
+                    WHERE (b.check_in_date, b.check_out_date) OVERLAPS ($2, $3)
+                    AND b.status != 'Cancelled'
                 ) LIMIT 1
-            """, tipo['id'], fecha_entrada, fecha_salida)
+            """, tipo['id'], d_entrada, d_salida)
 
-            if not habitacion_id: return "Ya no quedan habitaciones físicas disponibles para esas fechas."
+            if not habitacion_id:
+                return "Lo siento, ya no quedan habitaciones físicas disponibles para esas fechas."
 
-            noches = calcular_noches(fecha_entrada, fecha_salida)
+            noches = (d_salida - d_entrada).days
             total = noches * tipo['base_price']
 
             u_id = await conn.fetchval("""
@@ -119,13 +126,13 @@ async def crear_reserva(nombre_completo: str, email: str, fecha_entrada: str, fe
             b_id = await conn.fetchval("""
                 INSERT INTO Bookings (user_id, check_in_date, check_out_date, total_amount, status)
                 VALUES ($1, $2, $3, $4, 'Confirmed') RETURNING id
-            """, u_id, date.fromisoformat(fecha_entrada), date.fromisoformat(fecha_salida), total)
+            """, u_id, d_entrada, d_salida, total)
 
             await conn.execute("INSERT INTO RoomAssignments (booking_id, room_id) VALUES ($1, $2)", b_id, habitacion_id)
 
-            return f"¡Reserva #{b_id} confirmada! Habitación asignada. Total: ${total:.2f}."
+            return f"¡Reserva #{b_id} confirmada! Se le ha asignado una habitación. El total es de ${total:.2f}."
     except Exception as e:
-        return f"Error: {str(e)}"
+        return f"Error al procesar la reserva: {str(e)}"
     finally:
         await conn.close()
 
