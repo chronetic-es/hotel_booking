@@ -15,24 +15,6 @@ load_dotenv()
 
 mcp = FastMCP("HotelBookings")
 
-middleware = [
-    Middleware(
-        CORSMiddleware,
-        allow_origins=["*"],
-        allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
-        allow_headers=[
-            "mcp-protocol-version",
-            "x-mcp-protocol-version",
-            "mcp-session-id",
-            "Authorization",
-            "Content-Type",
-        ],
-        expose_headers=["mcp-session-id"],
-        allow_credentials=True
-    )
-]
-
-app = mcp.http_app(middleware=middleware)
 
 async def obtener_conexion_db():
     return await asyncpg.connect(os.getenv("DATABASE_URL"))
@@ -132,3 +114,13 @@ async def get_weather(city: str) -> str:
 
         return f"The current temperature in {city} is {temp}°C."
 
+app = mcp.http_app()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
+    expose_headers=["mcp-session-id"],
+    allow_credentials=False,
+)
