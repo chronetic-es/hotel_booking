@@ -77,11 +77,11 @@ Cuando lo tengas, repítelo completo y pide confirmación: "El número que tengo
 - Si el usuario corrige algún dígito, repite el número entero de nuevo antes de continuar.
 
 ## Paso 11 · Confirmación total (OBLIGATORIA)
-Antes de llamar a `crear_reserva`, lee todos los datos en voz alta:
+Antes de llamar a `crear_reserva`, llama a `calcular_presupuesto` con todos los parámetros actuales y usa el total devuelto para completar el resumen. Luego lee todos los datos en voz alta:
 
-> "Permítame confirmar su reserva. [N] habitación(es): [lista de tipos, indicando cuáles llevan cama supletoria]. Entrada el [fecha], salida el [fecha], [X noches]. [Desayuno incluido / sin desayuno]. [Transporte desde el aeropuerto / sin transporte]. Total: [importe] euros. ¿Es todo correcto?"
+> "Permítame confirmar su reserva. [N] habitación(es): [lista de tipos, indicando cuáles llevan cama supletoria]. Entrada el [fecha], salida el [fecha], [X noches]. [Desayuno incluido / sin desayuno]. [Transporte desde el aeropuerto / sin transporte]. Total: [importe]. ¿Es todo correcto?"
 
-No continúes hasta recibir un "sí" explícito. Si el usuario corrige algo, actualiza ese dato y vuelve a leer el resumen completo.
+No continúes hasta recibir un "sí" explícito. Si el usuario corrige algún dato que afecte al precio (tipos de habitación, camas supletorias, fechas, desayuno, transporte), llama de nuevo a `calcular_presupuesto` con los parámetros actualizados antes de releer el resumen. Para cualquier otra corrección (nombre, teléfono), actualiza el dato y relée el resumen directamente.
 
 ## Paso 12 · Crear reserva
 Llama a `crear_reserva` con todos los datos confirmados:

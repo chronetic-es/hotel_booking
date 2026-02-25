@@ -46,8 +46,8 @@ async def obtener_opciones_habitacion() -> str:
             if extra_bed_available:
                 extra_bed_price = float(f["extra_bed_price"])
                 supletoria_info = (
-                    f"Admite cama supletoria hasta {f['max_occupancy'] + 1} personas "
-                    f"(+{formatear_precio(extra_bed_price)} por noche)."
+                    f"Admite cama supletoria hasta {f['max_occupancy'] + 1} personas, "
+                    f"suplemento de {formatear_precio(extra_bed_price)} por noche."
                 )
             else:
                 supletoria_info = "No admite cama supletoria."
@@ -171,7 +171,7 @@ async def calcular_presupuesto(
             room_total = noches * base_price
             total += room_total
             desglose.append(
-                f"{tipo['name']}: {noches} noches × {formatear_precio(base_price)} = {formatear_precio(room_total)}"
+                f"{tipo['name']}: {noches} noches a {formatear_precio(base_price)} por noche, total {formatear_precio(room_total)}"
             )
 
             if mask[i]:
@@ -181,7 +181,7 @@ async def calcular_presupuesto(
                 eb_total = noches * extra_bed_price
                 total += eb_total
                 desglose.append(
-                    f"Cama supletoria {tipo['name']}: {noches} noches × {formatear_precio(extra_bed_price)} = {formatear_precio(eb_total)}"
+                    f"Cama supletoria {tipo['name']}: {noches} noches a {formatear_precio(extra_bed_price)} por noche, total {formatear_precio(eb_total)}"
                 )
 
         num_habitaciones = len(ids)
@@ -189,7 +189,7 @@ async def calcular_presupuesto(
             desayuno_total = noches * PRECIO_DESAYUNO_POR_NOCHE * num_habitaciones
             total += desayuno_total
             desglose.append(
-                f"Desayuno: {noches} noches × {num_habitaciones} habitaciones × {formatear_precio(PRECIO_DESAYUNO_POR_NOCHE)} = {formatear_precio(desayuno_total)}"
+                f"Desayuno: {noches} noches, {num_habitaciones} habitaciones a {formatear_precio(PRECIO_DESAYUNO_POR_NOCHE)} por habitación y noche, total {formatear_precio(desayuno_total)}"
             )
         if transporte:
             total += PRECIO_TRANSPORTE_AEROPUERTO
