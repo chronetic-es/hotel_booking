@@ -259,15 +259,17 @@ async def modificar_reserva(
     nueva_fecha_salida: str = "",
     nuevo_tipos_habitacion_ids: str = "",
     nuevo_extra_beds_mask: str = "",
-    nuevo_desayuno: bool | None = None,
-    nuevo_transporte: bool | None = None,
+    nuevo_desayuno: str = "",
+    nuevo_transporte: str = "",
 ) -> str:
     """Modifica las fechas, los tipos de habitación, las camas supletorias o los servicios adicionales de una reserva.
     nuevo_tipos_habitacion_ids: nueva lista de tipos separados por coma (ej: '2,3'). Vacío = sin cambio.
-    nuevo_extra_beds_mask: nueva máscara de camas supletorias (ej: '1,0'). Vacío = sin cambio."""
+    nuevo_extra_beds_mask: nueva máscara de camas supletorias (ej: '1,0'). Vacío = sin cambio.
+    nuevo_desayuno: 'true' o 'false' para cambiar el desayuno incluido. Vacío = sin cambio.
+    nuevo_transporte: 'true' o 'false' para cambiar el transporte desde el aeropuerto. Vacío = sin cambio."""
     cambios = any([
         nueva_fecha_entrada, nueva_fecha_salida, nuevo_tipos_habitacion_ids,
-        nuevo_extra_beds_mask, nuevo_desayuno is not None, nuevo_transporte is not None,
+        nuevo_extra_beds_mask, nuevo_desayuno != "", nuevo_transporte != "",
     ])
     if not cambios:
         return "Debe indicar al menos un cambio."
@@ -309,8 +311,8 @@ async def modificar_reserva(
         d_salida = date.fromisoformat(f_salida)
         noches = (d_salida - d_entrada).days
 
-        desayuno = nuevo_desayuno if nuevo_desayuno is not None else reserva["desayuno_incluido"]
-        transporte = nuevo_transporte if nuevo_transporte is not None else reserva["transporte_aeropuerto"]
+        desayuno = (nuevo_desayuno.lower() == "true") if nuevo_desayuno != "" else reserva["desayuno_incluido"]
+        transporte = (nuevo_transporte.lower() == "true") if nuevo_transporte != "" else reserva["transporte_aeropuerto"]
 
         changing_rooms = bool(nuevo_tipos_habitacion_ids.strip())
         changing_mask = bool(nuevo_extra_beds_mask.strip())
