@@ -1,5 +1,6 @@
 from instance import mcp
-import tools  # noqa: F401 — registers all tools on mcp
+import tools      # noqa: F401 — registers all tools on mcp
+import resources  # noqa: F401 — registers all resources on mcp
 from config import MCP_API_KEY
 from starlette.middleware.cors import CORSMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware

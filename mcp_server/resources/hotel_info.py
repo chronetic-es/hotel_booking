@@ -1,0 +1,72 @@
+from instance import mcp
+
+
+@mcp.resource("hotel://info")
+def obtener_informacion_hotel() -> str:
+    return """\
+EL GRAN HOTEL
+===================
+
+NOMBRE: El Gran Hotel ★★★★
+DIRECCIÓN: Rúa do Pazo, 12 · 15865 Brión · A Coruña · Galicia · España
+TELÉFONO: +34 981 88 34 20
+EMAIL: recepcion@pazodobrion.es
+
+UBICACIÓN
+---------
+En el municipio de Brión, a 15 km de Santiago de Compostela y 22 km del
+aeropuerto de Santiago (SCQ). Situado junto al río Sar en una finca de tres
+hectáreas con arquitectura de pazo gallego del siglo XVIII.
+
+Distancias:
+- Santiago de Compostela (centro histórico): 15 km · 20 min
+- Aeropuerto de Santiago (SCQ): 22 km · 25 min
+- Playa de Carnota: 55 km · 50 min
+
+HORARIOS
+--------
+Check-in:  desde las 15:00 h
+Check-out: hasta las 12:00 h
+Recepción: abierta las 24 horas
+Desayuno buffet: 07:30–10:30 h (lunes a viernes) · 08:00–11:00 h (fines de semana)
+
+INSTALACIONES Y SERVICIOS
+--------------------------
+- Restaurante "O Carballo": cocina gallega de mercado. 13:30–15:30 h y 20:30–22:30 h.
+- Bar-Cafetería: 07:30–23:30 h.
+- Sala de reuniones (hasta 30 personas, reserva previa).
+- Jardín y terraza con vistas al río Sar.
+- Capilla del siglo XVIII en la finca (visita libre).
+- Aparcamiento gratuito para huéspedes.
+- Wi-Fi gratuito en todas las instalaciones.
+- Caja fuerte en todas las habitaciones.
+- Servicio de lavandería (lunes a viernes, con coste adicional).
+- Transporte al/desde el aeropuerto de Santiago (reserva previa, con suplemento).
+
+MASCOTAS
+--------
+No se admiten mascotas en el interior del hotel.
+
+POLÍTICA DE CANCELACIÓN
+------------------------
+- Cancelación gratuita hasta 48 horas antes de la llegada.
+- Menos de 48 horas de antelación: se cobra la primera noche.
+- No-show: se cobra el 100 % de la estancia.
+
+FORMAS DE PAGO
+--------------
+Visa, Mastercard y American Express. No se acepta efectivo para importes superiores a 500 euros.
+
+IDIOMAS DE ATENCIÓN
+-------------------
+Gallego, español, inglés y portugués.
+
+PUNTOS DE INTERÉS CERCANOS
+---------------------------
+- Camino Portugués (acceso directo desde Brión).
+- Catedral de Santiago de Compostela: 17 km.
+- Monasterio de San Xusto de Toxosoutos: 8 km.
+- Pazo de Oca (jardines históricos): 30 km.
+- Ría de Muros e Noia: 40 km.
+- Castro de Baroña: 45 km.
+"""
