@@ -1,16 +1,10 @@
-from instance import mcp
-
-
-@mcp.resource("hotel://info")
-def obtener_informacion_hotel() -> str:
-    return """\
 EL GRAN HOTEL
 ===================
 
 NOMBRE: El Gran Hotel ★★★★
 DIRECCIÓN: Rúa do Pazo, 12 · 15865 Brión · A Coruña · Galicia · España
 TELÉFONO: +34 981 88 34 20
-EMAIL: recepcion@pazodobrion.es
+EMAIL: recepcion@elgranhotel.com
 
 UBICACIÓN
 ---------
@@ -69,4 +63,3 @@ PUNTOS DE INTERÉS CERCANOS
 - Pazo de Oca (jardines históricos): 30 km.
 - Ría de Muros e Noia: 40 km.
 - Castro de Baroña: 45 km.
-"""
