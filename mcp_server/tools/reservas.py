@@ -254,6 +254,7 @@ async def obtener_reservas_cliente(telefono: str) -> str:
 
 @mcp.tool()
 async def modificar_reserva(
+    telefono: str,
     reserva_id: int,
     nueva_fecha_entrada: str = "",
     nueva_fecha_salida: str = "",
@@ -262,11 +263,15 @@ async def modificar_reserva(
     nuevo_desayuno: str = "",
     nuevo_transporte: str = "",
 ) -> str:
-    """Modifica las fechas, los tipos de habitación, las camas supletorias o los servicios adicionales de una reserva.
+    """Modifica las fechas, los tipos de habitación, las camas supletorias o los servicios adicionales de una reserva. Requiere el teléfono del cliente para verificar que la reserva le pertenece.
     nuevo_tipos_habitacion_ids: nueva lista de tipos separados por coma (ej: '2,3'). Vacío = sin cambio.
     nuevo_extra_beds_mask: nueva máscara de camas supletorias (ej: '1,0'). Vacío = sin cambio.
     nuevo_desayuno: 'true' o 'false' para cambiar el desayuno incluido. Vacío = sin cambio.
     nuevo_transporte: 'true' o 'false' para cambiar el transporte desde el aeropuerto. Vacío = sin cambio."""
+    error_tel = validar_telefono(telefono)
+    if error_tel:
+        return error_tel
+
     cambios = any([
         nueva_fecha_entrada, nueva_fecha_salida, nuevo_tipos_habitacion_ids,
         nuevo_extra_beds_mask, nuevo_desayuno != "", nuevo_transporte != "",
@@ -276,13 +281,18 @@ async def modificar_reserva(
 
     conn = await obtener_conexion_db()
     try:
-        # Fetch booking status and services
+        # Fetch booking status and services, verifying phone ownership
         reserva = await conn.fetchrow(
-            "SELECT id, check_in_date, check_out_date, status, desayuno_incluido, transporte_aeropuerto FROM Bookings WHERE id = $1",
-            reserva_id,
+            """
+            SELECT b.id, b.check_in_date, b.check_out_date, b.status, b.desayuno_incluido, b.transporte_aeropuerto
+            FROM Bookings b
+            JOIN Users u ON b.user_id = u.id
+            WHERE b.id = $1 AND u.phone = $2
+            """,
+            reserva_id, telefono,
         )
         if not reserva:
-            return f"No encontré ninguna reserva con el número {reserva_id}."
+            return f"No encontré ninguna reserva con el número {reserva_id} asociada a su teléfono."
         if reserva["status"] in ("Cancelled", "Completed"):
             return f"La reserva número {reserva_id} está {reserva['status'].lower()} y no puede modificarse."
 
@@ -484,19 +494,28 @@ async def modificar_reserva(
 
 
 @mcp.tool()
-async def cancelar_reserva(reserva_id: int) -> str:
-    """Cancela una reserva dado su identificador."""
+async def cancelar_reserva(telefono: str, reserva_id: int) -> str:
+    """Cancela una reserva dado su identificador. Requiere el teléfono del cliente para verificar que la reserva le pertenece."""
+    error_tel = validar_telefono(telefono)
+    if error_tel:
+        return error_tel
+
     conn = await obtener_conexion_db()
     try:
-        estado = await conn.fetchval(
-            "SELECT status FROM Bookings WHERE id = $1", reserva_id
+        reserva = await conn.fetchrow(
+            """
+            SELECT b.status FROM Bookings b
+            JOIN Users u ON b.user_id = u.id
+            WHERE b.id = $1 AND u.phone = $2
+            """,
+            reserva_id, telefono,
         )
 
-        if estado is None:
-            return f"No encontré ninguna reserva con el número {reserva_id}."
-        if estado == "Cancelled":
+        if reserva is None:
+            return f"No encontré ninguna reserva con el número {reserva_id} asociada a su teléfono."
+        if reserva["status"] == "Cancelled":
             return f"La reserva número {reserva_id} ya estaba cancelada."
-        if estado == "Completed":
+        if reserva["status"] == "Completed":
             return f"La reserva número {reserva_id} ya está completada y no puede cancelarse."
 
         await conn.execute("UPDATE Bookings SET status = 'Cancelled' WHERE id = $1", reserva_id)
