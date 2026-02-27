@@ -65,6 +65,87 @@ async def obtener_opciones_habitacion() -> str:
 
 
 @mcp.tool()
+async def obtener_disponibilidad_por_tipo(
+    fecha_entrada: str,
+    fecha_salida: str,
+) -> str:
+    """Devuelve los tipos de habitación que tienen al menos una habitación libre para las fechas indicadas,
+    con el número de habitaciones disponibles de cada tipo. Excluye los tipos completamente agotados.
+    Úsalo al inicio del flujo de nueva reserva, una vez conocidas las fechas."""
+    error = validar_fechas(fecha_entrada, fecha_salida)
+    if error:
+        return error
+
+    d_entrada = date.fromisoformat(fecha_entrada)
+    d_salida = date.fromisoformat(fecha_salida)
+    noches = calcular_noches(fecha_entrada, fecha_salida)
+
+    conn = await obtener_conexion_db()
+    try:
+        query = """
+            SELECT rt.id, rt.name, rt.base_price, rt.max_occupancy,
+                   rt.extra_bed_available, rt.extra_bed_price, rt.description,
+                   COUNT(r.id) AS disponibles
+            FROM RoomTypes rt
+            JOIN Rooms r ON r.room_type_id = rt.id
+            WHERE r.id NOT IN (
+                SELECT ra.room_id
+                FROM RoomAssignments ra
+                JOIN Bookings b ON ra.booking_id = b.id
+                WHERE (b.check_in_date, b.check_out_date) OVERLAPS ($1::date, $2::date)
+                  AND b.status != 'Cancelled'
+            )
+            GROUP BY rt.id, rt.name, rt.base_price, rt.max_occupancy,
+                     rt.extra_bed_available, rt.extra_bed_price, rt.description
+            HAVING COUNT(r.id) > 0
+            ORDER BY rt.base_price
+        """
+        filas = await conn.fetch(query, d_entrada, d_salida)
+
+        if not filas:
+            return (
+                f"No hay disponibilidad para las fechas del {fecha_entrada} al {fecha_salida}. "
+                "Puede intentar con otras fechas."
+            )
+
+        mes_entrada = _MESES_ES[d_entrada.month - 1]
+        mes_salida = _MESES_ES[d_salida.month - 1]
+        opciones = []
+        for f in filas:
+            disponibles = f["disponibles"]
+            unidad = "habitación disponible" if disponibles == 1 else "habitaciones disponibles"
+            if f["extra_bed_available"]:
+                extra_bed_price = float(f["extra_bed_price"])
+                supletoria_info = (
+                    f"Admite cama supletoria hasta {f['max_occupancy'] + 1} personas, "
+                    f"suplemento de {formatear_precio(extra_bed_price)} por noche."
+                )
+            else:
+                supletoria_info = "No admite cama supletoria."
+            opciones.append(
+                f"{f['name']} (id:{f['id']}): {disponibles} {unidad}, "
+                f"{formatear_precio(float(f['base_price']))} por noche, "
+                f"capacidad {f['max_occupancy']} personas. {supletoria_info} {f['description']}"
+            )
+
+        addons = (
+            f"Desayuno incluido: {formatear_precio(PRECIO_DESAYUNO_POR_NOCHE)} por habitación y noche. "
+            f"Transporte desde el aeropuerto: {formatear_precio(PRECIO_TRANSPORTE_AEROPUERTO)} (tarifa única)."
+        )
+        cabecera = (
+            f"Habitaciones disponibles para el {d_entrada.day} de {mes_entrada} "
+            f"al {d_salida.day} de {mes_salida} ({noches} noche{'s' if noches != 1 else ''}): "
+        )
+        pie = (
+            "Nota: esta disponibilidad es solo para las fechas indicadas. "
+            "Si desea conocer todos los tipos de habitación del hotel con independencia de la disponibilidad, puede solicitarlo."
+        )
+        return cabecera + " ".join(opciones) + " " + addons + " " + pie
+    finally:
+        await conn.close()
+
+
+@mcp.tool()
 async def verificar_disponibilidad(
     fecha_entrada: str,
     fecha_salida: str,
