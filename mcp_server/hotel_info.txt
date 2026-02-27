@@ -1,65 +1,340 @@
-EL GRAN HOTEL
-===================
+# Base de conocimiento — Hotel Gastronómico Casa Rosalía
 
-NOMBRE: El Gran Hotel ★★★★
-DIRECCIÓN: Rúa do Pazo, 12 · 15865 Brión · A Coruña · Galicia · España
-TELÉFONO: +34 981 88 34 20
-EMAIL: recepcion@elgranhotel.com
+---
 
-UBICACIÓN
----------
-En el municipio de Brión, a 15 km de Santiago de Compostela y 22 km del
-aeropuerto de Santiago (SCQ). Situado junto al río Sar en una finca de tres
-hectáreas con arquitectura de pazo gallego del siglo XVIII.
+## 1. Información general
 
-Distancias:
-- Santiago de Compostela (centro histórico): 15 km · 20 min
-- Aeropuerto de Santiago (SCQ): 22 km · 25 min
-- Playa de Carnota: 55 km · 50 min
+- **Nombre completo:** Hotel Gastronómico Casa Rosalía
+- **Categoría:** Hotel rural con encanto, 2 estrellas
+- **Dirección:** Soigrexa 19, 15280 Os Anxeles – Brión, A Coruña, Galicia, España
+- **Teléfono de reservas:** +34 981 887 580
+- **Web oficial:** https://www.hotelcasarosalia.com/
+- **Redes sociales:** Facebook (HotelGastronomicoCasaRosalia), Twitter (@CasaRosalia), YouTube (hotelcasarosalia), TripAdvisor
+- **Año de apertura:** 1993 (uno de los primeros hoteles rurales en Galicia)
+- **Edificio:** Casa de labranza gallega de más de 250 años de antigüedad + edificio anexo moderno comunicados por un claustro
+- **Capacidad total:** Hasta 50 plazas
+- **Número de habitaciones:** 29 habitaciones en total
+- **Eslogan / lema:** "Tu otra casa"
 
-HORARIOS
---------
-Check-in:  desde las 15:00 h
-Check-out: hasta las 12:00 h
-Recepción: abierta las 24 horas
-Desayuno buffet: 07:30–10:30 h (lunes a viernes) · 08:00–11:00 h (fines de semana)
+---
 
-INSTALACIONES Y SERVICIOS
---------------------------
-- Restaurante "O Carballo": cocina gallega de mercado. 13:30–15:30 h y 20:30–22:30 h.
-- Bar-Cafetería: 07:30–23:30 h.
-- Sala de reuniones (hasta 30 personas, reserva previa).
-- Jardín y terraza con vistas al río Sar.
-- Capilla del siglo XVIII en la finca (visita libre).
-- Aparcamiento gratuito para huéspedes.
-- Wi-Fi gratuito en todas las instalaciones.
-- Caja fuerte en todas las habitaciones.
-- Servicio de lavandería (lunes a viernes, con coste adicional).
-- Transporte al/desde el aeropuerto de Santiago (reserva previa, con suplemento).
+## 2. Ubicación y distancias
 
-MASCOTAS
---------
-No se admiten mascotas en el interior del hotel.
+- **Distancia al centro de Santiago de Compostela:** 10 km (~15 minutos en coche)
+- **Distancia al aeropuerto de Santiago de Compostela:** ~22–30 km
+- **Parada de autobús más cercana:** A Gandara (cercana al hotel)
+- **Entorno:** Rural, rodeado de naturaleza (bosques, valle)
+- **Se recomienda:** Vehículo propio para llegar y desplazarse
 
-POLÍTICA DE CANCELACIÓN
-------------------------
-- Cancelación gratuita hasta 48 horas antes de la llegada.
-- Menos de 48 horas de antelación: se cobra la primera noche.
-- No-show: se cobra el 100 % de la estancia.
+### Puntos de interés cercanos (accesibles en menos de 1 hora en coche):
+- Santiago de Compostela (Catedral, Plaza de Abastos, Parque de la Alameda): 10 km
+- Ponte Maceira (Negreira): ~15 min en coche
+- Torres de Altamira: ~10 min en coche
+- Pazo de Faramello: ~15 min en coche
+- Finisterre y Costa da Morte
+- Sierra del Barbanza
+- Noia y Ría de Muros y Noia: ~25 km
+- La Isla de la Toja y Rías Baixas
+- A Coruña
+- Pontevedra y Combarro
+- Islas Cíes (excursión)
+- Fragas do Eume
+- Playa más cercana: ~25 km
+- Balneario de Compostela / Club Termal: 1 km del hotel
+- Hípica Boullon: 1 km del hotel
+- Club de Golf Val de Rois: 15 km (acuerdo con el hotel)
+- Praia fluvial de Tapia: cercana
 
-FORMAS DE PAGO
---------------
-Visa, Mastercard y American Express. No se acepta efectivo para importes superiores a 500 euros.
+---
 
-IDIOMAS DE ATENCIÓN
--------------------
-Gallego, español, inglés y portugués.
+## 3. Puntuación y opiniones (Booking.com)
 
-PUNTOS DE INTERÉS CERCANOS
----------------------------
-- Camino Portugués (acceso directo desde Brión).
-- Catedral de Santiago de Compostela: 17 km.
-- Monasterio de San Xusto de Toxosoutos: 8 km.
-- Pazo de Oca (jardines históricos): 30 km.
-- Ría de Muros e Noia: 40 km.
-- Castro de Baroña: 45 km.
+- **Puntuación general:** 9,2 sobre 10 — "Fantástico"
+- **Número de opiniones:** 268 opiniones verificadas
+
+### Puntuaciones por categoría:
+
+| Categoría               | Puntuación |
+|-------------------------|------------|
+| Personal (Staff)        | 9,7        |
+| WiFi gratuito           | 9,5        |
+| Limpieza                | 9,4        |
+| Confort                 | 9,3        |
+| Instalaciones           | 9,2        |
+| Relación calidad-precio | 9,2        |
+| Ubicación               | 9,0        |
+
+### Valoración para parejas: 9,1 (especialmente recomendado para viajes en pareja)
+
+### Lo que más destacan los huéspedes:
+- Personal atento, muy amable y hospitalario
+- La comida del restaurante: "buenísima", "first class"
+- Ambiente tranquilo, relajante y con carácter
+- Instalaciones rústicas muy bien conservadas
+- Habitaciones limpias, cómodas y con buena decoración
+- Hermoso jardín
+- Casa antigua con mucho encanto
+- Desayuno excelente con productos locales
+- Proximidad a Santiago de Compostela (15 min en coche)
+- Excelente relación calidad-precio
+
+---
+
+## 4. Descripción del hotel
+
+Casa Rosalía es un hotel rural con encanto situado en el Concello de Brión, a 10 km del centro de Santiago de Compostela. Abrió sus puertas en 1993 como uno de los primeros hoteles rurales de Galicia.
+
+El hotel se compone de dos edificios:
+
+**Edificio principal (casa rural de labranza, +250 años):**
+Conserva la estructura original de piedra y madera. En este edificio se encuentran:
+- La recepción
+- La cafetería
+- El restaurante (con varios comedores)
+- El salón de desayunos
+- Un salón social con chimenea (ideal para tardes de invierno)
+- 5 habitaciones con decoración rural que conservan la distribución original
+
+**Edificio anexo (moderno):**
+Se accede desde el claustro del hotel. Cuenta con decoración moderna y alberga:
+- 24 habitaciones distribuidas en planta baja, primera planta y segunda planta (habitaciones abuhardilladas con ventana tipo Velux)
+- Acceso al jardín y la piscina
+
+**El claustro:**
+Comunica ambos edificios. Tiene un pequeño jardín interior presidido por un cruceiro. Desde aquí se accede al restaurante, salón de desayunos y zona moderna de habitaciones.
+
+**Exterior:**
+- Jardín
+- Piscina al aire libre (abierta de abril a octubre)
+- Terraza de verano (para bebidas antes de cenar o copas por la noche)
+- Aparcamiento exterior gratuito
+
+---
+
+## 5. Habitaciones
+
+**Total:** 29 habitaciones
+
+### Distribución:
+- **5 habitaciones rurales** en la casa original (decoración rural, distribución histórica)
+- **24 habitaciones modernas** en el edificio anexo:
+  - Planta baja
+  - Primera planta
+  - Segunda planta: habitaciones abuhardilladas con ventana Velux en el techo
+
+### Equipamiento en habitación:
+- Cuarto de baño completo
+- Calefacción central
+- TV LCD 20"
+- WiFi gratuito
+
+---
+
+## 6. Servicios del hotel
+
+### Servicios generales:
+- Recepción 24 horas
+- WiFi gratuito en todo el hotel
+- Aparcamiento exterior gratuito
+- Información turística personalizada
+- Admite tarjetas de crédito
+- Cafetería
+- Restaurante a la carta
+- Menú del día (lunes a viernes no festivos, de 13:30 a 16:00)
+- Desayuno buffet (café, infusiones, zumo de naranja, bollería fresca, cereales, pan artesano, pan de molde, embutidos, macedonia de frutas, fruta del día, yogures, mermeladas, mantequilla y miel)
+
+### Ocio y bienestar:
+- Piscina al aire libre de temporada (abril a octubre)
+- Terraza de verano
+- Jardín
+- Salón con chimenea
+- Salón de TV
+- Servicio de masajes (bajo petición)
+
+### Eventos y empresa:
+- Salones para reuniones de empresa
+- Salones para banquetes (desde 12 hasta 55 personas)
+- Celebración de bautizos, bodas, comuniones y reuniones familiares
+- Paquete Reunión Empresa: incluye alquiler de salón con WiFi, cañón, retroproyector, coffee-break y almuerzo de trabajo
+- Outdoor Training y Team Building
+
+### Servicios adicionales (bajo petición y disponibilidad):
+- Transfers / servicio de traslados
+- Alquiler de coches
+- Organización de actividades de turismo activo
+
+---
+
+## 7. El Restaurante
+
+### Información general:
+- **Nombre:** Restaurante Casa Rosalía
+- **Tipo de cocina:** Cocina tradicional gallega de temporada, mediterránea, barbacoa/parrilla
+- **Comidas disponibles:** Almuerzo y cena
+- **Menú entresemana:** De lunes a viernes (no festivos), de 13:30 a 16:00, elaborado con platos de la carta
+- **Dietas especiales:** Acepta vegetariana, vegana, sin gluten y sin lácteos
+
+### Espacios del restaurante:
+1. **Comedor de la Lareira:** En la antigua cocina de la casa, junto al fuego de la chimenea. Ideal para cenas en pareja o grupos pequeños.
+2. **Comedor de Bastavales:** En las antiguas cuadras de la casa. Espacio privado para grupos de 12–16 personas (reuniones familiares o de amigos).
+3. **Comedor del Claustro:** Con vistas al jardín interior y al cruceiro.
+
+### Carta y especialidades:
+La carta fija incluye entrantes para compartir, pescados, carnes y postres. Existe además una hoja de sugerencias actualizada regularmente con platos de temporada.
+
+**Platos destacados de la carta:**
+- Pulpo a feira
+- Cocido gallego (temporada)
+- Lamprea (temporada)
+- Especialidades de caza (temporada)
+- Bacalao a la brasa
+- Brocheta de merluza y langostinos
+- Croquetas caseras de jamón
+- Ensalada templada de pulpo y espárragos trigueros
+- Arroz caldoso de bacalao y espinacas
+- Salmón con almejas
+- Pastel de cabracho
+- Solomillo de ternera al roquefort
+- Zamburiñas al horno / a la parrilla
+- Variado de pescado con patata panadera
+- Chuleta de ternera a la parrilla
+- Lomo de cerdo en salsa de nueces
+- Salteado de setas, langostinos y chipirones
+
+### Jornadas Gastronómicas:
+El restaurante organiza jornadas gastronómicas temáticas a lo largo del año (tradición de más de dos décadas). Incluyen menús de degustación especiales.
+
+### Banquetes y eventos:
+- Tres salones privados con capacidad de 12 a 55 personas
+- Menús personalizables para cada tipo de evento
+- Bautizos, primeras comuniones, bodas, cumpleaños, despedidas, comidas de empresa
+
+---
+
+## 8. Actividades de turismo activo
+
+Casa Rosalía colabora con empresas locales de turismo activo para ofrecer actividades (previa reserva):
+
+- Rafting en el río Ulla
+- Rutas a caballo por los Montes de Brión (Hípica Boullon a 1 km)
+- Rutas en quads en Padrón
+- Puenting en Noia
+- Rutas de senderismo
+- Kayak en el río Tambre
+- Barranquismo en el río Xallas
+- Karting
+- Canoas
+- Paintball
+- Tiro con arco
+- Club Termal del Balneario de Compostela (a 1 km): aguas mineromedicinales y tratamientos de relax, salud y belleza
+- Golf: acuerdo con Club de Golf Val de Rois (15 km)
+
+---
+
+## 9. Ofertas y paquetes (orientativos)
+
+- **Paquete Gastronómico Casa Rosalía:** Desde 165 € (incluye alojamiento + experiencia gastronómica)
+- **Paquete Casa Rosalía con Cena:** Desde 105 € (alojamiento + cena)
+- **Paquete Reunión Empresa:** Salón + WiFi + cañón + retroproyector + coffee-break + almuerzo
+- **Tarifas especiales para grupos:** Disponibles bajo petición (capacidad hasta 50 plazas)
+- **Garantía de mejor precio online** en la web oficial
+
+*Nota: los precios son orientativos y pueden variar según temporada y disponibilidad. Consultar directamente con el hotel para tarifas actualizadas.*
+
+---
+
+## 10. Normas y políticas
+
+| Concepto              | Detalle                                                                 |
+|-----------------------|-------------------------------------------------------------------------|
+| **Check-in**          | Consultar con el hotel (recepción 24 horas)                             |
+| **Check-out**         | Consultar con el hotel                                                  |
+| **Niños**             | Hotel family-friendly, se admiten niños                                  |
+| **Mascotas**          | Consultar directamente con el hotel                                      |
+| **Cancelación**       | Varía según tipo de tarifa y canal de reserva                           |
+| **Formas de pago**    | Tarjetas de crédito aceptadas                                           |
+| **Fumadores**         | Normativa vigente de espacios sin humo; posibles zonas exteriores        |
+
+---
+
+## 11. ¿Por qué elegir Casa Rosalía? (Propuesta de valor)
+
+1. Ambiente tranquilo y acogedor en un entorno rural con 250 años de historia
+2. Hospitalidad y mentalidad de servicio (puntuación 9,7 en Personal en Booking.com)
+3. Restaurante gastronómico con cocina tradicional gallega de temporada
+4. Desayuno buffet con productos locales
+5. Excelente relación calidad-precio (9,2 en Booking.com)
+6. Ubicación privilegiada: a solo 10 km de Santiago de Compostela y a menos de 1 hora de las principales atracciones de Galicia
+7. Piscina al aire libre de temporada, jardín y terraza
+8. Organización de actividades de turismo activo y aventura
+9. Ideal para escapadas en pareja (9,1 de valoración para parejas), familia o grupos de amigos
+10. Salones para eventos familiares y de empresa
+11. Certificado de Excelencia de TripAdvisor (solo el 10% de hoteles en el mundo lo poseen)
+
+---
+
+## 12. Preguntas frecuentes (FAQ)
+
+**P: ¿Dónde se encuentra el hotel?**
+R: En Soigrexa 19, Os Anxeles – Brión (A Coruña), a solo 10 km del centro de Santiago de Compostela, unos 15 minutos en coche.
+
+**P: ¿Cuántas habitaciones tiene el hotel?**
+R: 29 habitaciones en total: 5 con decoración rural en la casa original y 24 con decoración moderna en el edificio anexo.
+
+**P: ¿El hotel tiene restaurante?**
+R: Sí, el Restaurante Casa Rosalía es uno de los principales atractivos. Ofrece cocina tradicional gallega de temporada con carta fija, sugerencias de temporada y jornadas gastronómicas. Tiene tres comedores con diferentes ambientes. También hay menú entresemana de lunes a viernes.
+
+**P: ¿Qué se incluye en el desayuno?**
+R: Desayuno buffet con café, infusiones, zumo de naranja, bollería fresca, cereales, pan artesano, pan de molde, embutidos, macedonia de frutas, fruta del día, yogures, mermeladas, mantequilla y miel.
+
+**P: ¿Tienen piscina?**
+R: Sí, piscina al aire libre de temporada, abierta de abril a octubre.
+
+**P: ¿Hay aparcamiento?**
+R: Sí, aparcamiento exterior gratuito.
+
+**P: ¿Hay WiFi?**
+R: Sí, WiFi gratuito en todo el hotel (valorado con un 9,5 sobre 10 en Booking.com).
+
+**P: ¿Es adecuado para parejas?**
+R: Sí, especialmente recomendado. Las parejas lo valoran con un 9,1 en Booking.com. El Comedor de la Lareira junto a la chimenea es ideal para cenas románticas.
+
+**P: ¿Puedo celebrar un evento (boda, comunión, cumpleaños)?**
+R: Sí, el hotel dispone de tres salones para banquetes con capacidad de 12 a 55 personas. Los menús son personalizables. Contactar al +34 981 887 580 o a través de la web.
+
+**P: ¿Qué actividades puedo hacer cerca?**
+R: Rafting, rutas a caballo, quads, puenting, senderismo, kayak, barranquismo, karting, paintball, tiro con arco, club termal a 1 km, golf a 15 km, y excursiones culturales por toda Galicia.
+
+**P: ¿Cómo se llega al hotel?**
+R: Se recomienda vehículo propio. Está a 15 minutos en coche de Santiago de Compostela. La parada de bus más cercana es A Gandara. El aeropuerto de Santiago está a unos 22–30 km. Se puede solicitar servicio de transfer bajo petición.
+
+**P: ¿Es apto para reuniones de empresa?**
+R: Sí, disponen de salones equipados con WiFi, cañón y retroproyector. Ofrecen un Paquete Reunión Empresa que incluye alquiler de salón, coffee-break y almuerzo de trabajo. También organizan actividades de Outdoor Training y Team Building.
+
+**P: ¿Aceptan grupos grandes?**
+R: Sí, tienen capacidad para hasta 50 plazas y ofrecen tarifas especiales para grupos.
+
+**P: ¿Cuál es la puntuación del hotel en Booking.com?**
+R: 9,2 sobre 10 ("Fantástico"), basado en 268 opiniones verificadas. Lo más destacado es el personal (9,7) y el WiFi (9,5).
+
+---
+
+## 13. Enlaces y contacto
+
+- **Web oficial:** https://www.hotelcasarosalia.com/
+- **Booking.com:** https://www.booking.com/hotel/es/hotelcasarosalia.html
+- **Teléfono:** +34 981 887 580
+- **Dirección:** Soigrexa 19, 15280 Os Anxeles – Brión, A Coruña, España
+- **Facebook:** https://www.facebook.com/HotelGastronomicoCasaRosalia
+- **TripAdvisor:** https://www.tripadvisor.es/Hotel_Review-g616250-d573915-Reviews-Hotel_Casa_Rosalia-Brion_A_Coruna_Province_Galicia.html
+
+---
+
+## 14. Notas para el asistente LLM
+
+- **Fuentes de datos:** Web oficial del hotel (hotelcasarosalia.com), Booking.com (268 reviews, puntuación 9.2), Expedia, Hotels.com, Quierohotel.com y otras fuentes de terceros. Datos verificados en febrero de 2026.
+- **Fiabilidad:** Los datos de puntuaciones, servicios y descripción están verificados con múltiples fuentes. Los precios son orientativos y deben verificarse.
+- **Tono recomendado:** Cálido, cercano, informativo. El hotel se posiciona como familiar, acogedor y con trato personal.
+- **Diferenciadores clave:** La gastronomía, la historia del edificio (250 años), el trato personal del staff (9,7), la cercanía a Santiago de Compostela y la relación calidad-precio.
+- **Si el usuario pregunta algo no cubierto:** Recomendar contactar directamente al hotel al +34 981 887 580 o visitar https://www.hotelcasarosalia.com/
+- **Cuidado con:** No confundir con otros hoteles rurales en Brión. El nombre oficial es "Hotel Gastronómico Casa Rosalía" (con tilde en la í).
