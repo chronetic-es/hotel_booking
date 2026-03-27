@@ -10,34 +10,6 @@ La arquitectura del edificio sigue el modelo de los palacetes burgueses malague�
 
 ---
 
-## Caracterización de la Oferta Residencial y Tipologías de Habitaciones
-
-El inventario de alojamiento del Hotel Boutique Anahíta consta de 16 habitaciones, cada una diseñada con una identidad individualizada que aprovecha las particularidades arquitectónicas del palacio. La distribución de las estancias se aleja de la uniformidad de las cadenas hoteleras internacionales, ofreciendo desde espacios íntimos para viajeros solitarios hasta suites dúplex de dos niveles que aprovechan la verticalidad del edificio y sus techos abuhardillados. Todas las unidades comparten un estándar de lujo que incluye camas king-size de dimensiones 2x2 metros, climatización individualizada y una selección de productos de acogida de la marca Rituals, subrayando el compromiso del hotel con el bienestar sensorial y la sostenibilidad.
-
-| Categoría de Habitación | Superficie Aproximada | Elementos Distintivos | Vista / Ubicación |
-|---|---|---|---|
-| Anahita's Single | 15 m² | Cama de matrimonio, diseño compacto | Interior / Tranquilidad |
-| Anahita's Essential | 18-19 m² | Cama king-size, practicidad y confort | Patio Interior |
-| Anahita's Deluxe | 29 m² | Murales pintados a mano, techos altos | Calle Álamos o Patio |
-| Anahita's Premium | 29-36 m² | Frescos del siglo XVIII, baño de mármol | Calle Álamos o Patio |
-| Anahita's Duplex Deluxe | 29-31 m² | Bañera exenta, dos niveles, vigas vistas | Patio Interior |
-| Anahita's Duplex Premium | 33-35 m² | Frescos originales, techos inclinados | Patio Interior |
-| Pompeya Suite | 45-55 m² | Jacuzzi privado, salón independiente | Calle Álamos (Balcón) |
-
-### Análisis de las Habitaciones de Nivel Estándar y Superior
-
-La categoría Anahita's Single está concebida para el viajero de negocios o el turista individual que no desea renunciar al estilo por viajar solo. A pesar de su tamaño reducido de 15 m², incluye una cama de matrimonio que rompe con el estándar de las camas individuales estrechas, proporcionando un descanso superior en el centro histórico. Por su parte, la habitación Anahita's Essential representa la opción más equilibrada, enfocada en la sencillez elegante. Estas habitaciones suelen estar orientadas hacia el patio interior, lo que garantiza un aislamiento acústico casi total frente al bullicio exterior de las calles comerciales de Málaga.
-
-Las habitaciones Anahita's Deluxe y Premium introducen al huésped en la verdadera experiencia de palacio. En estas unidades, los detalles arquitectónicos restaurados cobran protagonismo. Las Premium, en particular, son espacios bañados por luz natural gracias a grandes ventanales que, en algunos casos, se abren a balcones tradicionales con vistas a la Calle Álamos. La presencia de frescos del siglo XVIII en las paredes de las habitaciones Premium convierte la estancia en un evento cultural, complementado por baños de mármol con duchas de efecto lluvia y una iluminación de diseño que permite crear diferentes ambientes según la hora del día.
-
-### Innovación Espacial: Las Habitaciones Dúplex y la Suite Pompeya
-
-Una de las características más aclamadas del Anahíta es su aprovechamiento de la estructura abuhardillada para crear habitaciones de dos niveles. Las Duplex Deluxe y Duplex Premium separan físicamente el área de descanso del área de relajación. En la planta inferior, el huésped encuentra baños espaciosos equipados con bañeras de diseño exentas, permitiendo un ritual de baño independiente del área de dormitorio. La planta superior, accesible mediante escaleras interiores, alberga la cama king-size bajo techos de vigas vistas, creando una atmósfera de refugio ideal para estancias románticas.
-
-La culminación de la oferta del hotel es la Suite Pompeya, una residencia de dos plantas inspirada en la grandeza clásica. Con una superficie que puede alcanzar los 55 m², esta suite es la única que cuenta con un jacuzzi privado en el nivel superior, junto al dormitorio y un baño de estilo spa con ducha walk-in. La planta inferior está dedicada a la vida social, con un salón generoso, zona de comedor y ventanales que ofrecen una perspectiva privilegiada de la vida urbana malagueña. El uso de texturas arquitectónicas, ladrillo visto y frescos restaurados en esta suite garantiza una experiencia de inmersión total en el lujo histórico.
-
----
-
 ## Identidad Gastronómica: Anahita Bistro y la Cocina Persa
 
 El Hotel Boutique Anahíta se distingue de sus competidores por una propuesta gastronómica audaz y diferenciada: Anahita Bistro. Mientras que la mayoría de los hoteles del centro de Málaga optan por menús mediterráneos convencionales, el Anahíta ha apostado por la riqueza de la cocina persa e iraní. El restaurante, situado en el patio interior del edificio decimonónico, ofrece un entorno íntimo donde la historia de las paredes se mezcla con los aromas de las especias orientales. Bajo la dirección del Chef Sasan, el bistro se ha convertido en un punto de referencia no solo para los huéspedes, sino también para el público local que busca sabores auténticos y técnicas contemporáneas aplicadas a recetas tradicionales de Irán.
