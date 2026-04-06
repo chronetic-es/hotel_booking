@@ -7,7 +7,7 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
       - POSTGRES_DB=${DB_NAME}
     ports:
-      - "5432:5432"
+      - "${DB_PORT}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -21,7 +21,7 @@ services:
       - PRECIO_DESAYUNO_POR_NOCHE=${PRECIO_DESAYUNO_POR_NOCHE}
       - PRECIO_TRANSPORTE_AEROPUERTO=${PRECIO_TRANSPORTE_AEROPUERTO}
     ports:
-      - "8000:8000"
+      - "${MCP_PORT}:8000"
 
 volumes:
   postgres_data:
